@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web OS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="desktop">
+      <div
+        class="icon"
+        id="icon1"
+        ondblclick="openThisPC()"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src=".//images/thispc.png" alt="This PC" />
+        <p style="color: white">This PC</p>
+      </div>
+      <div
+        class="icon"
+        id="icon2"
+        ondblclick="openThisPC()"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src=".//images/recyclebin.png" alt="This PC" />
+        <p style="color: white">Recycle Bin</p>
+      </div>
+      <div
+        class="icon"
+        id="icon3"
+        ondblclick="openThisPC()"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src=".//images/notepad.png" alt="This PC" />
+        <p style="color: white">Notepad</p>
+      </div>
+      <div
+        class="icon"
+        id="icon4"
+        ondblclick="openThisPC()"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src=".//images/cmd.png" alt="This PC" />
+        <p style="color: white">Command Prompt</p>
+      </div>
+    </div>
+
+    <div id="taskbar">
+      <div id="left-task">
+        <div id="start"><img src="./images/start.png" alt="start" /></div>
+        <div id="search" class="search-container">
+          <input type="text" placeholder="search" /><i
+            class="fa-solid fa-magnifying-glass"
+          ></i>
+        </div>
+      </div>
+      <div id="clock">
+        <span id="battery"
+          ><i class="fa-solid fa-battery-three-quarters"></i
+        ></span>
+        <span id="speaker"><i class="fa-solid fa-volume-high"></i></span>
+        <span id="wifi"><i class="fa-solid fa-wifi"></i></span>
+        <span id="lang">ENG</span>
+        <span id="time">--:--</span>
+        <span id="date">-- --, ----</span>
+      </div>
+
+      <div id="time-tooltip"></div>
+      <div id="calendar-container" class="hidden">
+        <div id="calendar-header">
+          <button id="prevMonth">←</button>
+          <span id="monthYear">June 2025</span>
+          <button id="nextMonth">→</button>
+        </div>
+        <div id="hover-info"></div>
+        <div id="calendar-grid"></div>
+      </div>
+    </div>
+
+    <!-- This PC Window -->
+    <div id="thisPCWindow" class="window">
+      <div class="window-header">
+        <span>This PC</span>
+        <button onclick="closeWindow('thisPCWindow')">X</button>
+      </div>
+      <div class="window-body">
+        <p>Local Disk (C:)</p>
+        <p>Documents</p>
+        <p>Downloads</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
