@@ -82,7 +82,7 @@ body {
   width: 100%;
   padding: 10px 35px 10px 10px; /* right padding for the icon */
   box-sizing: border-box;
-  font-size: 3vh;
+  font-size: 2vh;
   border: none;
   border-radius: 10vw;
   height: 80%;
@@ -90,15 +90,36 @@ body {
   margin-left: 1vh;
 }
 
-.search-container i {
+.search-icon {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 60%;
+  transform: translateY(-50%);
+  color: #999;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.search-icon:hover {
+  color: #333;
+}
+
+/* .search-container i {
+  position: absolute;
+  right: 10px;
+  top: 60%;
   transform: translateY(-50%);
   color: #666; /* optional icon color */
-  pointer-events: none; /* allows clicks to pass through to input */
+/*pointer-events: none;  allows clicks to pass through to input 
+} */
+.search-icon {
+  color: #999; /* base color */
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
-#clock {
+.search-icon:hover {
+  color: #333; /* darker color on hover */
+}
+*/ #clock {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -197,17 +218,21 @@ body {
 .window {
   display: none;
   position: absolute;
-  top: 150px;
-  left: 200px;
-  width: 300px;
-  height: 200px;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
   background: white;
   border: 2px solid #333;
   z-index: 1000;
 }
+#close:hover {
+  background-color: red;
+  color: white;
+}
 
 .window-header {
-  background: #0078d7;
+  background: rgb(10, 10, 10);
   color: white;
   padding: 5px;
   display: flex;

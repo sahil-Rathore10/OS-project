@@ -62,7 +62,7 @@
         <div id="start"><img src="./images/start.png" alt="start" /></div>
         <div id="search" class="search-container">
           <input type="text" placeholder="search" /><i
-            class="fa-solid fa-magnifying-glass"
+            class="fa-solid fa-magnifying-glass search-icon"
           ></i>
         </div>
       </div>
@@ -93,7 +93,15 @@
     <div id="thisPCWindow" class="window">
       <div class="window-header">
         <span>This PC</span>
-        <button onclick="closeWindow('thisPCWindow')">X</button>
+        <div class="close-min">
+          <button onclick="closeWindow('thisPCWindow')">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button onclick="closeWindow('thisPCWindow')">
+            <i class="fa-regular fa-window-restore"></i>
+          </button>
+          <button id="close" onclick="closeWindow('thisPCWindow')">X</button>
+        </div>
       </div>
       <div class="window-body">
         <p>Local Disk (C:)</p>
